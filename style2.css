@@ -1,0 +1,33 @@
+@import url('http://fonts.cdnfonts.com/css/comic-sans');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color:  #151719;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.waviy span {
+  font-size: 20vh;
+  font-family: 'Comic Sans', cursive;
+  display: inline-block;
+  color: #fff;
+  animation: waviy 1s infinite;
+  animation-delay: calc(.1s * var(--i));
+  
+}
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}
