@@ -33,16 +33,13 @@
             name = "mc3000";
 
             unpackPhase = ":";
-            src = ./.;
+            src = lib.sources.sourceFilesBySuffices ./. [ ".html" ".css" ".js" ];
 
             # buildPhase = '' '';
 
             installPhase =
               ''
-                mkdir -p $out
-                cp $src/index.html $out/index.html
-                cp $src/index2.html $out/index2.html
-                cp $src/style2.css $out/style2.css
+                cp -r $src $out
               '';
           };
       };
