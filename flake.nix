@@ -2,8 +2,6 @@
   description = "simple html page";
 
   # Nixpkgs / NixOS version to use.
-  # inputs.nixpkgs.url = "nixpkgs/nixos-unstable";
-
   inputs.nixpkgs.url = "nixpkgs/nixos-unstable";
 
   outputs = { self, nixpkgs }:
@@ -56,7 +54,7 @@
         let cfg = config.services.mc3000;
         in {
 
-          # Optios for configuration
+          # Options for configuration. TODO add host and port
           options.services.mc3000.enable = mkEnableOption "mc3000 page";
 
           config = mkIf cfg.enable {
